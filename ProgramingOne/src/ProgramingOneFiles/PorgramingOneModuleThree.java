@@ -1,10 +1,33 @@
 package ProgramingOneFiles;
+import java.util.*;
 
 public class PorgramingOneModuleThree {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Scanner scnr = new Scanner(System.in);
+		
+		System.out.print("What is your weekly base pay? ");
+		
+		double pay = scnr.nextDouble();
+		double total = 0.0;
+		
+		if (pay < 500.0) {
+			total = 0.1*pay;
+		}
+		else if (pay < 1500.0) {
+			total = 0.1*500.0 + 0.15*(pay-500.0);
+		}
+		else if (pay < 2500.0) {
+			total = 0.1*500.0 + 0.15*(1000) + 0.2*(pay-1500.0);
+		}
+		else {
+			total = 0.1*500.0 + 0.15*(1000) + 0.2*(1000.0) + 0.3*(pay-2500.0);
+		}
+		
+		System.out.println("Your weekly tax withholdings are $" + total);
+	
+	
+	scnr.close();
 	}
 
 }
