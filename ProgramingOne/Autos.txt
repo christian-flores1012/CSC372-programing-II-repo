@@ -1,0 +1,8 @@
+----- Vehicle Information -----
+Make: Dodge
+Model: Charger
+Color: Red
+Year: 2013
+Miles: 100900
+
+

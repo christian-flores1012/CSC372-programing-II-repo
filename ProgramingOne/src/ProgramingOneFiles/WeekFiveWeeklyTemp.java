@@ -1,11 +1,13 @@
 package ProgramingOneFiles;
 import java.util.*;
+import java.text.DecimalFormat;
 
-public class CSC320CTA5WeeklyTemp {
+public class WeekFiveWeeklyTemp {
 
 	public static void main(String[] args) {
 		
 		Scanner scnr = new Scanner(System.in);
+		DecimalFormat df = new DecimalFormat("0.00");
 		
 		List<Double> avgTemps = new ArrayList<>(); //creates arrayList for temps
 		List<String> weekDays = new ArrayList<>(); // create arrayList for days
@@ -19,7 +21,7 @@ public class CSC320CTA5WeeklyTemp {
 		weekDays.add("SATURDAY");
 		
 		
-		for(int i = 0; i < weekDays.size(); i++) { // ask user for average temps
+		for(int i = 0; i < weekDays.size(); i++) { // ask user for average tempsS
 			System.out.print("What is the average temperature of " + weekDays.get(i) + "? ");
 			try {
 				avgTemps.add(scnr.nextDouble());
@@ -52,12 +54,10 @@ public class CSC320CTA5WeeklyTemp {
 					total += avgTemps.get(weekDays.indexOf(day));
 				}
 				
-				total /= weekDays.size(); // calculates average and sets to only 2 decimal places 
-				int decimal = (int)(total*100);
-				total = (double)decimal;
-				total /= 100;
+				total /= weekDays.size(); // calculates average 
+
 				
-				System.out.println("\nWEEK: \nAvg Temp: " + total + " degrees"); // prints out weekly average
+				System.out.println("\nWEEK: \nAvg Temp: " + df.format(total) + " degrees"); // prints out weekly average
 			}
 			else if(userSelection.toUpperCase().equals("END")) { // ends program
 				System.out.println("Program Ended.");

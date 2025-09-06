@@ -2,7 +2,7 @@ package ProgramingOneFiles;
 import java.util.Scanner;
 import java.lang.Math;
 
-public class CSC320moduleFour {
+public class WeekFourFloatingPointCalculations {
 
 	public static void main(String[] args) {
 
@@ -13,10 +13,25 @@ public class CSC320moduleFour {
 		
 		double[] info = new double[reps]; // creates an empty array of doubles to hold values
 		
-		for (int i=0; i < reps; i++) { //Asks user for every number
-			System.out.print("Enter floating point number " + (i+1) + ": ");
-			info[i] = scnr.nextDouble();
-		}
+        for (int i = 0; i < reps; i++) {
+            while (true) { // keep asking until valid input
+                System.out.print("Enter floating point number " + (i + 1) + ": ");
+
+                try {
+                    double value = scnr.nextDouble();
+
+                    if (value < 0) {
+                        System.out.println("Negative values are not allowed. Please try again.");
+                    } else {
+                        info[i] = value;
+                        break; // exit the loop once a valid number is stored
+                    }
+                } catch (Exception e) {
+                    System.out.println("Invalid input. Please enter a numeric value.");
+                    scnr.next(); // clear the bad input from the scanner buffer
+                }
+            }
+        }
 		
 		System.out.println("Results:");// Prints all the solutions
 		System.out.println("Total: " + calculateTotal(info));
