@@ -11,8 +11,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 /*
- * reused BankAccount class from CTA1
- * I chose option #1 Bank Balance Application
+ * 
+ * I chose option #2 Week 3 CTA User Interface Orange
  * 
  */
 
