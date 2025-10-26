@@ -8,40 +8,50 @@ public class SumRecursion {
 	public static void main(String[] args) {
 		//scanner
 		Scanner scnr = new Scanner(System.in);
+		
+		int count = 5;// number of values to sum
+		double[] values = new double[count];
+		
 		//prints out value of added values
-		System.out.println("Total is " + add(5,scnr) );
+		System.out.println("Total is " + promptValues(count,scnr,values) ); //asks user for 5 double values
 		
 		scnr.close();
 
 	}
 	
-	public static double add(int count, Scanner scnr) {
+	public static double promptValues(int count, Scanner scnr, double[] values) {
 		
-		//track total
-		double num = 0;
+		int i = 0;
+		
 		//input control
-		boolean valid = false;
-		
-	    while (!valid) {
+		for (i = 0; i < count; i++) {
 	        try {
 	        		//asks user for numeric value
 	            System.out.print("Enter numeric value: ");
-	            num = scnr.nextDouble();
-	            //if value is numeric turns valid
-	            valid = true; 
+	            values[i] = scnr.nextDouble();
+	            //if value is numeric turns valid 
 	        } catch (Exception e) {
 	            System.out.println("Invalid input. Please enter a numeric value.");
-	            scnr.nextLine(); 
+	            scnr.nextLine();
+	            i--;
 	        }
-	    }
-	    	
-	    //if the count reaches 1 item left
-	    if (count <= 1) {
-	        return num;
+	    	}
+	    
+	    return sum(values, count - 1);
+	    
+	    
+	}
+	
+	public static double sum(double[] values, int index) {
+		
+		 //if the count reaches index 0
+	    if (index < 1) {
+	        return values[index];
 	    } else {
 	    		//continues for all count numbers going down
-	        return num + add(count - 1, scnr);
+	        return values[index] + sum(values, index - 1);
 	    }
+		
 	}
 	
 
