@@ -21,11 +21,13 @@ public class CheckingAccount extends BankAccount {
 	
 	
 	public void processWithdrawl(double amount){ //allows overdraft withdraw
+		//if you withdraw more than balance account will go netative plus 30 dollar extra negative balance for overdraft
 		if (amount > super.getBalance()) {
 			System.out.println("\nOverdraft on withdrawl of $-" + amount + ". $-30 fee will be applied to negative balance.");
 			this.deposit(amount * -1);
 			this.deposit(-30);
 		}
+		// if withdraw amount is less than account balance no overdraft fee is palaced
 		else {
 			this.deposit(amount * -1);
 		}
