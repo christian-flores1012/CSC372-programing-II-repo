@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1432282612/PATH/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1432282612/PATH/operation=replace
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1432282612/PATH/value=C\:\\Users\\Chris\\Downloads\\winlibs-x86_64-posix-seh-gcc-15.2.0-mingw-w64ucrt-13.0.0-r3\\mingw64\\bin;%PATH%
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1432282612/append=true
+environment/project/cdt.managedbuild.config.gnu.mingw.exe.debug.1432282612/appendContributed=true
