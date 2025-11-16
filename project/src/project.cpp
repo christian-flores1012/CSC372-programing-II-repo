@@ -5,6 +5,8 @@ using namespace std;
 
 int main() {
 
+	//initialize character info
+
 	string firstName = "Peter";
 	string lastName = "Parker";
 	string streetAddress = "123 Mary Jane Drive";
@@ -12,11 +14,13 @@ int main() {
 	string zipCode = "2048";
 
 
-	cout << "First Name: " <<firstName<< endl; // num value
-	cout << "Last Name: " <<lastName<< endl; // deci value
-	cout << "Street Address: " <<streetAddress<< endl; // charecter value
-	cout << "City: " <<city<< endl; // b value
-	cout << "Zip Code: " <<zipCode<< endl; // b value
+	//print info to console
+
+	cout << "First Name: " <<firstName<< endl;
+	cout << "Last Name: " <<lastName<< endl;
+	cout << "Street Address: " <<streetAddress<< endl;
+	cout << "City: " <<city<< endl;
+	cout << "Zip Code: " <<zipCode<< endl;
 
 	return 0;
 }
