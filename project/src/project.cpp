@@ -1,6 +1,7 @@
 
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
@@ -16,11 +17,40 @@ int main() {
 
 	//print info to console
 
-	cout << "First Name: " <<firstName<< endl;
-	cout << "Last Name: " <<lastName<< endl;
-	cout << "Street Address: " <<streetAddress<< endl;
-	cout << "City: " <<city<< endl;
-	cout << "Zip Code: " <<zipCode<< endl;
+	//cout << "First Name: " <<firstName<< endl;
+	//cout << "Last Name: " <<lastName<< endl;
+	//cout << "Street Address: " <<streetAddress<< endl;
+	//cout << "City: " <<city<< endl;
+	//
+	//cout << "Zip Code: " <<zipCode<< endl;
+
+
+
+
+
+
+
+    std::string name;
+
+    std::cout << "Enter your name: ";
+
+    // std::string grows as needed
+    std::cin >> name;
+
+    std::cout << "Hello, " << name << "\n";
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	return 0;
 }
